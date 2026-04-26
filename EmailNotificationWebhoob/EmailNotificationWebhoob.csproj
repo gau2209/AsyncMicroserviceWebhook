@@ -8,8 +8,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="MailKit" Version="4.16.0" />
-		<PackageReference Include="MassTransit" Version="9.1.0" />
-		<PackageReference Include="MassTransit.RabbitMQ" Version="9.1.0" />
+		<PackageReference Include="MassTransit" Version="8.2.5" />
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
 	</ItemGroup>
 
 	<ItemGroup>
