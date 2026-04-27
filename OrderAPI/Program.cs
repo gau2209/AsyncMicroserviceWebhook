@@ -33,7 +33,7 @@ namespace OrderAPI
                         c.Username("guest");
                         c.Password("guest");
                     });
-                    config.ReceiveEndpoint("email-webhook-queue", e =>
+                    config.ReceiveEndpoint("product-queue", e =>
                     {
                         e.ConfigureConsumer<ProductConsumer>(context);
                     });
