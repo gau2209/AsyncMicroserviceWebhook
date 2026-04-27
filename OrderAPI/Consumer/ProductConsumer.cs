@@ -15,7 +15,13 @@ namespace OrderAPI.Consumer
 
         public async Task Consume (ConsumeContext<Product> context)
         {
-            _orderDBContext.Products.Add(context.Message);
+            var Product = new Product
+            {
+                ID = 0,
+                Name = context.Message.Name,
+                Price = context.Message.Price
+            };
+            _orderDBContext.Products.Add(Product);
             await _orderDBContext.SaveChangesAsync( );
         }
     }
