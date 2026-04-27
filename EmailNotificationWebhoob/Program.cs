@@ -12,7 +12,8 @@ namespace EmailNotificationWebhoob
         public static void Main (string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddHttpClient<Repository.IEmail, EmailService>( );
+            builder.Services.AddScoped<IEmail, EmailService>( );
+            builder.Services.AddHttpClient();
             builder.Services.AddMassTransit(x =>
             {
                 x.AddConsumer<WebhookConsumer>( );
